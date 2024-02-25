@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import PetsController from "../controllers/PetsController";
-import Pet from "../models/Pets";
+import Pet from "../models/Pet";
 
 export const listPets = async (req: Request, res: Response) => {
   try {

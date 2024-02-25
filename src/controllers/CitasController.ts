@@ -1,4 +1,4 @@
-import Cita from "../models/Citas";
+import Cita from "../models/Cita";
 import Mysql from "../services/connectionDB";
 
 const { Citas } = Mysql.models;

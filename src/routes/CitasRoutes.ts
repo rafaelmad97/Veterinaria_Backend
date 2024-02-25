@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import CitasController from "../controllers/CitasController";
-import Cita from "../models/Citas";
+import Cita from "../models/Cita";
 
 export const listCitas = async (req: Request, res: Response) => {
   try {
