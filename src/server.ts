@@ -1,4 +1,5 @@
 import Express, { Application } from "express";
+import Mysql from "./services/connectionDB";
 
 class Server {
   private app: Application;
@@ -8,7 +9,11 @@ class Server {
     this.port = port ?? 3000;
   }
 
-  startServer() {
+  async startServer() {
+    Mysql.authenticate()
+      .then(() => console.log("okay"))
+      .catch((e) => console.log(e));
+
     this.app.listen(this.port, () => {
       console.log(`run server in ${this.port}`);
     });

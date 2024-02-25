@@ -1,4 +1,9 @@
 ### Unrealsed
+## [0.0.3] - 2024/02/24
+## Added
+- Se implementó la conexión a bases de datos mysql
+- Se implementó el uso de sequelize y el manejo de variables de entorno
+
 ## [0.0.2] - 2024/02/24
 ## Added
 - Se implementó la primera configuración de el servidor express.
