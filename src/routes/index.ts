@@ -6,6 +6,13 @@ import {
   updateMedico,
   deleteMedico,
 } from "./MedicosRouter";
+import {
+  createUser,
+  deleteUser,
+  listUsers,
+  listUsersbyId,
+  updateUser,
+} from "./UsersRouter";
 
  import { listCitas, 
          listMedicosbyId, 
@@ -45,5 +52,12 @@ router.post("/pet/create", createPet);
 router.post("/pet/update/:id", updatePet);
 router.post("/pet/delete/:id", deletePet);
 /// Api Mascotas
+
+router.get("/users/list", listUsers);
+router.get("/users/list/:id", listUsersbyId);
+router.post("/users/create", createUser);
+router.post("/users/update/:id", updateUser);
+router.post("/users/delete/:id", deleteUser);
+// Api Usuarios
 
 export default router;
