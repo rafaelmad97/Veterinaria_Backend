@@ -6,12 +6,23 @@ import {
   updateMedico,
   deleteMedico,
 } from "./MedicosRouter";
-import {
-  createCitas,
-  deleteCitas,
-  listCitas,
-  updateCitas,
+
+ import { listCitas, 
+         listMedicosbyId, 
+         createCitas,
+         updateCitas,
+         deleteCitas
 } from "./CitasRoutes";
+
+import {
+  createPet,
+  deletePet,
+  listPets,
+  listPetsbyId,
+  listPetsbyUserId,
+  updatePet,
+} from "./PetsRoutes";
+
 
 const router = Router();
 
@@ -27,5 +38,12 @@ router.post("/citas/create", createCitas);
 router.post("/citas/update/:id", updateCitas);
 router.post("/citas/delete/:id", deleteCitas);
 /// api Citas
+router.get("/pet/list", listPets);
+router.get("/pet/list/:id", listPetsbyId);
+router.get("/pet/list/byuser/:id", listPetsbyUserId);
+router.post("/pet/create", createPet);
+router.post("/pet/update/:id", updatePet);
+router.post("/pet/delete/:id", deletePet);
+/// Api Mascotas
 
 export default router;
