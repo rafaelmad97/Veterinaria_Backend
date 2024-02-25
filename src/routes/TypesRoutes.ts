@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import TypesController from "../controllers/TypesController";
-import Type from "../models/Types";
+import Type from "../models/Type";
 
 export const listTypes = async (req: Request, res: Response) => {
   try {

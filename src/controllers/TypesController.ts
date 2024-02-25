@@ -1,4 +1,4 @@
-import Type from "../models/Types";
+import Type from "../models/Type";
 import Mysql from "../services/connectionDB";
 
 const { Types } = Mysql.models;
