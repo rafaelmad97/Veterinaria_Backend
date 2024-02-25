@@ -1,7 +1,16 @@
 ### Unrealsed
 ## [0.0.7] - 2024/02/24
 ## Added
-- Se Implementó la api para gestionar el registro de usuarios\
+- Se Implementó la api para gestionar el registro de usuarios
+
+## [0.0.6] - 2024/02/25
+## Added
+-  Se implementó la a api para la gestión de mascotas.
+
+## [0.0.5] - 2024/02/25
+## Added
+- Se ha implementado la api para la gestión de las citas 
+- Se implementó el orden de las citas de forma ascendente.
   
 ## [0.0.4] - 2024/02/24
 ## Added
