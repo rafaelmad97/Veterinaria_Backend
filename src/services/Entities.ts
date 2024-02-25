@@ -5,7 +5,6 @@ const basename = path.basename(__filename);
 const folder = "/Entities";
 
 const getEntities = () => {
-  console.log(__dirname);
   return fs
     .readdirSync(path.join(__dirname, folder))
     .filter(

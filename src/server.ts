@@ -1,6 +1,5 @@
 import Express, { Application } from "express";
 import Mysql from "./services/connectionDB";
-import MedicosController from "./controllers/MedicosController";
 
 class Server {
   private app: Application;
