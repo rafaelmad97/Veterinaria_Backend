@@ -1,5 +1,9 @@
 ### Unrealsed
-## [0.0.4] - 2034/02/24
+## [0.0.7] - 2024/02/24
+## Added
+- Se Implementó la api para gestionar el registro de usuarios\
+  
+## [0.0.4] - 2024/02/24
 ## Added
 - Implementación de la api para el ingreso de los datos de los medicos.
 - se agregó el paseador el body en las peticiones.
