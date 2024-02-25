@@ -14,11 +14,12 @@ import {
   updateUser,
 } from "./UsersRouter";
 
- import { listCitas, 
-         listMedicosbyId, 
-         createCitas,
-         updateCitas,
-         deleteCitas
+import {
+  listCitas,
+  listMedicosbyId,
+  createCitas,
+  updateCitas,
+  deleteCitas,
 } from "./CitasRoutes";
 
 import {
@@ -29,7 +30,13 @@ import {
   listPetsbyUserId,
   updatePet,
 } from "./PetsRoutes";
-
+import {
+  createDiagnostico,
+  deleteDiagnostico,
+  listDiagnosticobyId,
+  listDiagnosticos,
+  updateDiagnostico,
+} from "./DiagnosticosRoutes";
 
 const router = Router();
 
@@ -59,5 +66,11 @@ router.post("/users/create", createUser);
 router.post("/users/update/:id", updateUser);
 router.post("/users/delete/:id", deleteUser);
 // Api Usuarios
+router.get("/diagnosticos/list", listDiagnosticos);
+router.get("/diagnosticos/list/:id", listDiagnosticobyId);
+router.post("/diagnosticos/create", createDiagnostico);
+router.post("/diagnosticos/update/:id", updateDiagnostico);
+router.post("/diagnosticos/delete/:id", deleteDiagnostico);
+// Api Diagnosticos
 
 export default router;

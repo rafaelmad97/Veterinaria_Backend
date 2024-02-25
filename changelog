@@ -1,4 +1,8 @@
 ### Unrealsed
+## [0.0.8] - 2024/02/25
+- Se implementaron las apis para la gestión de los diagnosticos.
+- se ajustaron los nombres de los modelos.
+
 ## [0.0.7] - 2024/02/24
 ## Added
 - Se Implementó la api para gestionar el registro de usuarios

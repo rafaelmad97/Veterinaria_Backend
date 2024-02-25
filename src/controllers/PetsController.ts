@@ -1,4 +1,4 @@
-import Pet from "../models/Pets";
+import Pet from "../models/Pet";
 import Mysql from "../services/connectionDB";
 
 const { Pets } = Mysql.models;
