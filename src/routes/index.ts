@@ -14,11 +14,12 @@ import {
   updateUser,
 } from "./UsersRouter";
 
- import { listCitas, 
-         listMedicosbyId, 
-         createCitas,
-         updateCitas,
-         deleteCitas
+import {
+  listCitas,
+  listMedicosbyId,
+  createCitas,
+  updateCitas,
+  deleteCitas,
 } from "./CitasRoutes";
 
 import {
@@ -29,7 +30,13 @@ import {
   listPetsbyUserId,
   updatePet,
 } from "./PetsRoutes";
-
+import {
+  createType,
+  deleteTypes,
+  listTypes,
+  listTypesbyId,
+  updateType,
+} from "./TypesRoutes";
 
 const router = Router();
 
@@ -52,12 +59,17 @@ router.post("/pet/create", createPet);
 router.post("/pet/update/:id", updatePet);
 router.post("/pet/delete/:id", deletePet);
 /// Api Mascotas
-
 router.get("/users/list", listUsers);
 router.get("/users/list/:id", listUsersbyId);
 router.post("/users/create", createUser);
 router.post("/users/update/:id", updateUser);
 router.post("/users/delete/:id", deleteUser);
+// Api Usuarios
+router.get("/types/list", listTypes);
+router.get("/types/list/:id", listTypesbyId);
+router.post("/types/create", createType);
+router.post("/types/update/:id", updateType);
+router.post("/types/delete/:id", deleteTypes);
 // Api Usuarios
 
 export default router;
