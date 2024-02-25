@@ -1,4 +1,9 @@
 ### Unrealsed
+## [0.0.4] - 2034/02/24
+## Added
+- Implementación de la api para el ingreso de los datos de los medicos.
+- se agregó el paseador el body en las peticiones.
+
 ## [0.0.3] - 2024/02/24
 ## Added
 - Se implementó la conexión a bases de datos mysql
