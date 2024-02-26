@@ -4,7 +4,7 @@ export default (sequelize: Sequelize) =>
   sequelize.define(
     "Types",
     {
-      isType: {
+      idType: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,

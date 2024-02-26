@@ -3,6 +3,7 @@ import Entities from "./Entities";
 import dotenv from "dotenv";
 
 const MYSQL_PARSED = dotenv.config().parsed;
+
 const Mysql = new Sequelize({
   dialect: "mysql",
   host: MYSQL_PARSED?.MYSQL_SERVER.toString(),
@@ -20,10 +21,6 @@ const Mysql = new Sequelize({
   define: {
     charset: "utf32",
     collate: "utf32_spanish2_ci",
-  },
-  sync: {
-    force: Boolean(MYSQL_PARSED?.TESTING),
-    logging: Boolean(MYSQL_PARSED?.TESTING),
   },
 });
 

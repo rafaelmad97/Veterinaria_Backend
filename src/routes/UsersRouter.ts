@@ -28,6 +28,7 @@ export const listUsersbyId = async (req: Request, res: Response) => {
 export const createUser = async (req: Request, res: Response) => {
   try {
     const user = req.body as User;
+
     await UsersController.agregarUser(user);
     res
       .status(200)
