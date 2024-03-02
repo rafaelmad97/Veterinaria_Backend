@@ -17,13 +17,14 @@ const Mysql = new Sequelize({
       rejectUnauthorized: false,
     },
   },
+
   define: {
     charset: "utf32",
     collate: "utf32_spanish2_ci",
   },
   sync: {
-    force: Boolean(MYSQL_PARSED?.TESTING),
-    logging: Boolean(MYSQL_PARSED?.TESTING),
+    force: true,
+    logging: true,
   },
 });
 

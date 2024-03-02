@@ -11,6 +11,7 @@ import {
   deleteUser,
   listUsers,
   listUsersbyId,
+  loginUser,
   updateUser,
 } from "./UsersRouter";
 import {
@@ -66,15 +67,16 @@ router.post("/pet/delete/:id", deletePet);
 /// Api Mascotas
 router.get("/users/list", listUsers);
 router.get("/users/list/:id", listUsersbyId);
+router.get("/users/login", loginUser);
 router.post("/users/create", createUser);
-router.post("/users/update/:id", updateUser);
-router.post("/users/delete/:id", deleteUser);
+router.put("/users/update/:id", updateUser);
+router.delete("/users/delete/:id", deleteUser);
 // Api Usuarios
 router.get("/diagnosticos/list", listDiagnosticos);
 router.get("/diagnosticos/list/:id", listDiagnosticobyId);
 router.post("/diagnosticos/create", createDiagnostico);
-router.post("/diagnosticos/update/:id", updateDiagnostico);
-router.post("/diagnosticos/delete/:id", deleteDiagnostico);
+router.put("/diagnosticos/update/:id", updateDiagnostico);
+router.delete("/diagnosticos/delete/:id", deleteDiagnostico);
 // Api Diagnosticos
 router.get("/types/list", listTypes);
 router.get("/types/list/:id", listTypesbyId);

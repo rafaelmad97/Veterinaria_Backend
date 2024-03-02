@@ -24,6 +24,22 @@ class Server {
 
   async startServer() {
     Mysql.authenticate().then(() => console.log("okay"));
+    const persona = await Mysql.models.Persona.create({
+      id: 0,
+      Nombres: "",
+      Apellidos: "",
+      birthdate: new Date().toISOString(),
+      email: "",
+      telefono: "",
+      recibeNotificaciones: false,
+    }).then((res) => res.dataValues);
+
+    await Mysql.models.Users.create({
+      Id: 0,
+      username: "xd",
+      password: "xd",
+      Persona_id: persona.id,
+    });
 
     this.app.listen(this.port, () => {
       console.log(`run server in ${this.port}`);
