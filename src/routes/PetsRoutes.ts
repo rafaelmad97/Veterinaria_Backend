@@ -6,7 +6,7 @@ export const listPets = async (req: Request, res: Response) => {
   try {
     const pets = await PetsController.listPets();
     res.status(200).json(pets);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e });
   }
 };
@@ -20,7 +20,7 @@ export const listPetsbyId = async (req: Request, res: Response) => {
     } else {
       throw Error("Mascota no encontrada");
     }
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -34,7 +34,7 @@ export const listPetsbyUserId = async (req: Request, res: Response) => {
     } else {
       throw Error("Mascota no encontrada");
     }
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -46,7 +46,7 @@ export const createPet = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Mascota creada correctamente", data: pet });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -62,7 +62,7 @@ export const updatePet = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Mascota editada correctamente", data: pet });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -72,7 +72,7 @@ export const deletePet = async (req: Request, res: Response) => {
 
     await PetsController.eliminarPet(Number(id));
     res.status(200).json({ message: "Mascota eliminada correctamente" });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };

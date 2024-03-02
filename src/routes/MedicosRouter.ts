@@ -6,7 +6,7 @@ export const listMedicos = async (req: Request, res: Response) => {
   try {
     const medicos = await MedicosController.listMedicos();
     res.status(200).json(medicos);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e });
   }
 };
@@ -20,7 +20,7 @@ export const listMedicosbyId = async (req: Request, res: Response) => {
     } else {
       throw Error("Medico no encontrado");
     }
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -32,7 +32,7 @@ export const createMedico = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Medico creado correctamente", data: medico });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -48,7 +48,7 @@ export const updateMedico = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Medico editado correctamente", data: medico });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -58,7 +58,7 @@ export const deleteMedico = async (req: Request, res: Response) => {
 
     await MedicosController.eliminarMedicos(Number(id));
     res.status(200).json({ message: "Medico eliminado correctamente" });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };

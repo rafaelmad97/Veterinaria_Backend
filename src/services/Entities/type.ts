@@ -14,5 +14,5 @@ export default (sequelize: Sequelize) =>
         allowNull: false,
       },
     },
-    { createdAt: false, updatedAt: false }
+    { createdAt: false, updatedAt: false, freezeTableName: true }
   );

@@ -6,7 +6,7 @@ export const listTypes = async (req: Request, res: Response) => {
   try {
     const types = await TypesController.listTypes();
     res.status(200).json(types);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e });
   }
 };
@@ -20,7 +20,7 @@ export const listTypesbyId = async (req: Request, res: Response) => {
     } else {
       throw Error("Tipo de mascota no encontrado");
     }
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -32,7 +32,7 @@ export const createType = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Tipo de mascota creada correctamente", data: type });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -48,7 +48,7 @@ export const updateType = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Tipo de mascota editada correctamente", data: type });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -59,7 +59,7 @@ export const deleteTypes = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "Tipo de mascota editada eliminada correctamente" });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };

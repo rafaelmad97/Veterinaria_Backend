@@ -6,7 +6,7 @@ export const listCitas = async (req: Request, res: Response) => {
   try {
     const medicos = await CitasController.listCitas();
     res.status(200).json(medicos);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e });
   }
 };
@@ -20,7 +20,7 @@ export const listCitabyId = async (req: Request, res: Response) => {
     } else {
       throw Error("Cita no encontrado");
     }
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -30,7 +30,7 @@ export const createCitas = async (req: Request, res: Response) => {
     const cita = req.body as Cita;
     await CitasController.agregarCita(cita);
     res.status(200).json({ message: "Cita creada correctamente", data: cita });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -44,7 +44,7 @@ export const updateCitas = async (req: Request, res: Response) => {
     }
     await CitasController.editarCitas(cita, Number(id));
     res.status(200).json({ message: "Cita editado correctamente", data: cita });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };
@@ -53,7 +53,7 @@ export const deleteCitas = async (req: Request, res: Response) => {
     const { id } = req.params;
     await CitasController.eliminarCitas(Number(id));
     res.status(200).json({ message: "Cita eliminado correctamente" });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 };

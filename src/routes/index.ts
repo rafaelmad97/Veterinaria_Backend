@@ -15,7 +15,7 @@ import {
 } from "./UsersRouter";
 import {
   listCitas,
-  listMedicosbyId,
+  listCitabyId,
   createCitas,
   updateCitas,
   deleteCitas,
@@ -52,7 +52,7 @@ router.post("/medicos/update/:id", updateMedico);
 router.post("/medicos/delete/:id", deleteMedico);
 /// Api Medicos
 router.get("/citas/list", listCitas);
-router.get("/citas/list/:id", listMedicosbyId);
+router.get("/citas/list/:id", listCitabyId);
 router.post("/citas/create", createCitas);
 router.post("/citas/update/:id", updateCitas);
 router.post("/citas/delete/:id", deleteCitas);

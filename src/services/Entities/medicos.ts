@@ -23,6 +23,6 @@ export default (sequelize: Sequelize) => {
         type: DataTypes.STRING,
       },
     },
-    { createdAt: false, updatedAt: false }
+    { createdAt: false, updatedAt: false, freezeTableName: true }
   );
 };
