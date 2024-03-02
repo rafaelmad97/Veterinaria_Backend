@@ -1,4 +1,8 @@
 ### Unrealsed
+## [0.0.11] - 2024/03/02
+## Added
+- Se implementó una actualización en el modelo de datos en el manejo de usuarios
+
 ## [0.0.10] - 2024/03/01
 ## Added
 - Se implementó el nombre del modelo para la tabla personas

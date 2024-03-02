@@ -17,6 +17,7 @@ const Mysql = new Sequelize({
       rejectUnauthorized: false,
     },
   },
+
   define: {
     charset: "utf32",
     collate: "utf32_spanish2_ci",
