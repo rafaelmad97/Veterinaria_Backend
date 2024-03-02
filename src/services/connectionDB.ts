@@ -23,8 +23,8 @@ const Mysql = new Sequelize({
     collate: "utf32_spanish2_ci",
   },
   sync: {
-    force: true,
-    logging: true,
+    force: Boolean(MYSQL_PARSED?.TESTING),
+    logging: Boolean(MYSQL_PARSED?.TESTING),
   },
 });
 
