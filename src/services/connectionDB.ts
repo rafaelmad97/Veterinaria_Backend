@@ -29,7 +29,20 @@ const Mysql = new Sequelize({
 
 Entities.getEntities().forEach((item: any) => item.default(Mysql));
 
-const { Citas, Diagnosticos, Medicos, Pets, Users, Types } = Mysql.models;
+const { Persona, Citas, Diagnosticos, Medicos, Pets, Users, Types } =
+  Mysql.models;
+
+Persona.hasMany(Users, {
+  foreignKey: "Persona_id",
+  foreignKeyConstraint: true,
+});
+// muchos usuarios solo pueden ser una persona
+Persona.hasMany(Medicos, {
+  foreignKey: "Persona_id",
+  foreignKeyConstraint: true,
+});
+
+// muchos medicos solo pueden ser una persona
 
 Users.hasMany(Pets, {
   foreignKey: "user_Id",
